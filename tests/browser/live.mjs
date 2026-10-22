@@ -39,7 +39,7 @@ await p.getByText("Проверка").first().click();
 await p.waitForTimeout(2000);
 await check("главный экран");
 assert.equal(await p.locator('[data-testid="sidebar-global-new-workspace"]').innerText(), "Новая папка");
-assert.equal(await p.locator('[data-testid="dialogs-block"]').getByText("Папки", { exact: true }).count(), 1);
+assert.equal(await p.locator('[data-testid="dialogs-block"]').getByText("Диалоги", { exact: true }).count(), 1);
 
 // чат не тронут
 const reply = await p.locator('[data-testid="assistant-message"]').first().innerText();
